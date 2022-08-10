@@ -30,7 +30,7 @@ const Board: FC = () => {
             //Each time board state changes, the correct disks are redered in each column
             <Circle
               m={1}
-              size="40px"
+              className="disk"
               key={`${i}-${j}`}
               boxShadow="inner"
               bg={playerColor[p as Player] || "gray.300"}
@@ -39,8 +39,8 @@ const Board: FC = () => {
           {/* For each column he have the option to enter a disk so long as it is not full */}
           <Circle
             m={1}
-            size="40px"
             boxShadow="base"
+            className="disk"
             visibility="hidden"
             bg={playerColor[player]}
             _groupHover={{
