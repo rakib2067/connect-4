@@ -5,14 +5,18 @@ import GameProgress from "components/GameProgress";
 import { FC } from "react";
 import { RecoilRoot } from "recoil";
 
+import "../styles/index.css";
+
 const App: FC = () => (
   <ChakraProvider>
     <RecoilRoot>
-      <Container py={4} as={VStack}>
-        <Board />
-        <GameProgress />
-        <GameControls />
-      </Container>
+      <main className="container">
+        <Container className="game-container" py={4} as={VStack}>
+          <Board />
+          <GameProgress />
+          <GameControls />
+        </Container>
+      </main>
     </RecoilRoot>
   </ChakraProvider>
 );
