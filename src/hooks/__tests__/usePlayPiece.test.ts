@@ -54,6 +54,24 @@ test("should win with 4 in a row horizontally", () => {
   assertGame(1, true, [[1], [1], [1], [1], [1], [2], [2, 2, 2]]);
 });
 
+test("should win with 4 in a row diagonally from: bottom-left -> top-right", () => {
+  const { play, assertGame } = render();
+
+  [0, 1, 1, 2, 2, 0, 2, 3, 3, 3, 3].forEach(play);
+
+  // Player 1 won the game!
+  assertGame(1, true, [[1, 2], [2, 1], [2, 1, 1], [2, 1, 2, 1], [], [], []]);
+});
+
+test("should win with 4 in a row diagonally from: top-left -> bottom-right", () => {
+  const { play, assertGame } = render();
+
+  [0, 0, 0, 0, 1, 1, 2, 1, 0, 2, 0, 3].forEach(play);
+
+  // Player 2 won the game!
+  assertGame(2, true, [[1, 2, 1, 2, 1, 1], [1, 2, 2], [1, 2], [2], [], [], []]);
+});
+
 test("should not play a piece when the column is full", () => {
   const { play, assertGame } = render();
 
