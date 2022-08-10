@@ -16,9 +16,14 @@ const GameControls: FC = () => {
   };
 
   return (
-    <Button onClick={handleReset} isDisabled={!board.some((col) => col.length)}>
-      Reset
-    </Button>
+    <>
+      <Button
+        onClick={handleReset}
+        isDisabled={!board.some((col) => col.length)}
+      >
+        Reset
+      </Button>
+    </>
   );
 };
 
