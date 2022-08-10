@@ -1,12 +1,16 @@
+:root{
+    --box-shadow: 0px 3px 8px #212121
+}
 .container{
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .game-container{
-    box-shadow: 0px 3px 8px #212121;
+    box-shadow:var(--box-shadow);
     border-radius: 10px;
     max-width: 35ch !important;
 }
@@ -16,6 +20,7 @@
     width: 30px;
     height: 30px;
 }
+
 
 @media screen and (min-width: 360px) {
     .game-container{
