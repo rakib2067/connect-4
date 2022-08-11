@@ -1,6 +1,6 @@
 import { FormControl, Input } from "@chakra-ui/react";
 import React from "react";
-import { playerConfig } from "state";
+import { playerConfig } from "types";
 
 interface PlayerConfigInputProps {
   playerConfigState: playerConfig;

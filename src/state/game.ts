@@ -1,6 +1,6 @@
 import { boardCols } from "const";
 import { atom } from "recoil";
-import { Board, Player } from "types";
+import { Board, Player, playerConfig } from "types";
 
 const localStorageEffect =
   (key: string) =>
@@ -45,7 +45,3 @@ export const playerTwoState = atom<playerConfig>({
   default: { name: "Yellow", color: "#ece100" },
   effects: [localStorageEffect("playerTwoState")],
 });
-export interface playerConfig {
-  name: string;
-  color: string;
-}
