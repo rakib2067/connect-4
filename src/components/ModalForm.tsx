@@ -44,7 +44,12 @@ export function ModalForm({ onClose, isOpen, handleReset }: ModalFormProps) {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="red" mr={3} onClick={handleReset}>
+            <Button
+              data-testid="modal-reset"
+              colorScheme="red"
+              mr={3}
+              onClick={handleReset}
+            >
               Reset
             </Button>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
