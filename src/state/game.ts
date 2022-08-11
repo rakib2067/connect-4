@@ -35,12 +35,17 @@ export const gameOverState = atom<boolean>({
   effects: [localStorageEffect("gameOverState")],
 });
 
-// interface GameStats {
-//   turns: number;
-//   timer: number;
-// }
-
-// export const gameStatsState = atom<GameStats>({
-//   key: "gameStatsState",
-//   default: { turns: 0, timer: 1660166233285 },
-// });
+export const playerOneState = atom<playerConfig>({
+  key: "playerOneState",
+  default: { name: "Red", color: "#f10000" },
+  effects: [localStorageEffect("playerOneState")],
+});
+export const playerTwoState = atom<playerConfig>({
+  key: "playerTwoState",
+  default: { name: "Yellow", color: "#ece100" },
+  effects: [localStorageEffect("playerTwoState")],
+});
+export interface playerConfig {
+  name: string;
+  color: string;
+}

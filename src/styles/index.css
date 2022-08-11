@@ -21,6 +21,12 @@
     height: 30px;
 }
 
+.form-control{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+
 
 @media screen and (min-width: 360px) {
     .game-container{
